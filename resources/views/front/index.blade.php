@@ -1,7 +1,7 @@
 @extends('front.template')
 
 @section('main')
-
+<div class="col-md-8 row-border">
 <div class="adBox adtray-728">
     
     

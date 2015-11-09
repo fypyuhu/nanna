@@ -24,19 +24,62 @@ Route::get('product/report', [
         'middleware' => 'admin'
 ]);
 
-Route::resource('product', 'ProductController', [
-	//'except' => ['create', 'show']
-    'middleware' => 'admin'
-]);
-Route::resource('productUnit', 'ProductUnitController', [
-	//'except' => ['create', 'show']
-    'middleware' => 'admin'
-]);
-Route::resource('recipe', 'RecipeController', [
-	//'except' => ['create', 'show']
-    'middleware' => 'admin'
-]);
+Route::resource('search', 'SearchController', [
+    
+   // 'except' => ['create', 'show']
+    //'middleware' => 'admin'
 
+    
+]);
+Route::resource('category', 'CategoryController', [
+    
+   // 'except' => ['create', 'show']
+    //'middleware' => 'admin'
+
+    
+]);
+Route::resource('channel', 'ChannelController', [
+    
+   // 'except' => ['create', 'show']
+    //'middleware' => 'admin'
+
+    
+]);
+Route::resource('contact', 'ContactController', [
+    
+   // 'except' => ['create', 'show']
+    //'middleware' => 'admin'
+
+    
+]);
+Route::resource('index', 'IndexController', [
+    
+   // 'except' => ['create', 'show']
+    //'middleware' => 'admin'
+
+    
+]);
+Route::resource('privacy', 'PrivacyController', [
+    
+   // 'except' => ['create', 'show']
+    //'middleware' => 'admin'
+
+    
+]);
+Route::resource('terms', 'TermsController', [
+    
+   // 'except' => ['create', 'show']
+    //'middleware' => 'admin'
+
+    
+]);
+Route::resource('watch', 'WatchController', [
+    
+   // 'except' => ['create', 'show']
+    //'middleware' => 'admin'
+
+    
+]);
 //raw Routes end
 
 

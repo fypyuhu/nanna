@@ -42,9 +42,9 @@
                 });
                 </script>
 
-
-
-
+                
+                
+                
 <div class="col-md-8 row-border">
     <div class="adBox adtray-728">
 
@@ -63,7 +63,7 @@
                     <button type="submit" class="btn navbar-search-btn"><i class="fa fa-search btn-bg-blue"></i></button>
                 </span>
             </form>
-            <div class="page-heading">Search Results</div>
+           <div class="page-heading">Category: Music</div>
             <div class="btn-group pull-left margin-top-10 margin-bottom-5">
                 <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
                     Sort Videos <span class="caret"></span>

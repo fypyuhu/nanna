@@ -20,7 +20,12 @@
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]--><script type="text/javascript">
+    <![endif]-->
+@yield('headInclude')
+
+<script type="text/javascript">
+        
+        
    $(document).ready(function() {
         var anExcitedSource = function(query, cb) {
             $.getJSON("http://suggestqueries.google.com/complete/search?callback=?",
@@ -148,7 +153,7 @@ $(document).ready(function(){
               $('#'+id+'>.page-header>h4>.hide-videos>li>ul>li').html('<a class="pointer" onclick="hideVideos(\''+id+'\')">Hide these videos</a>');
           }
 </script>
-<div class="col-md-8 row-border">
+
 
     <section>
         

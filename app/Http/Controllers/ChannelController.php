@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class ProductUnitController extends Controller
+class ChannelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,8 @@ class ProductUnitController extends Controller
      */
     public function index()
     {
+        return view('front.channel.index');
         //
-    
-        return view('back.productUnit.index');
     }
 
     /**

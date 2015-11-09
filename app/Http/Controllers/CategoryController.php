@@ -7,21 +7,16 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class ProductController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return Response
      */
-     public function report()
-    {
-        return view('back.product.report');
-        
-    }
     public function index()
     {
-        return view('back.product.index');
+        return view('front.category.index');
         //
     }
 

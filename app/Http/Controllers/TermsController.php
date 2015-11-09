@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class RecipeController extends Controller
+class TermsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        return view('back.recipe.index');
+        return view('front.terms.index');
         //
     }
 

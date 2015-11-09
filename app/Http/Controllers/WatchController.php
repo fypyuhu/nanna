@@ -7,21 +7,16 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class MaterialController extends Controller
+class WatchController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return Response
      */
-     public function report()
-    {
-        return view('back.material.report');
-        //
-    }
     public function index()
     {
-        return view('back.material.index');
+        return view('front.watch.index');
         //
     }
 
