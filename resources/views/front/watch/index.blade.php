@@ -10,9 +10,22 @@
         
 
 @stop
+
+@section('footerScript')
+<script type="text/javascript">
+                 videojs( 'videoholder', { 
+                  plugins : { 
+                  resolutionSelector: {default_res:'360p'},
+          persistVolume:{
+            namespace: 'persist-Volume'
+          } } });
+  </script>
+@stop
 @section('main')
 
 
+<div class="container white-bg">
+<div class="row">
 <script type="text/javascript">
 $(document).ready(function () {
 	$('#DownloadPanel').click(function(event){
@@ -266,13 +279,11 @@ function Loadrelated(token, ad){
 <div style="border: 1px solid #757575; padding: 5px;">
 <p style="margin: 5px 0 5px 0;"><strong>To download video:</strong> Right click on the following button and select <strong>"Save Link As"</strong></p>
 <div class="btn-group btn-group-justified">
-<a href="
-   
-   https://r1---sn-tt17dnee.c.docs.google.com/videoplayback?source=youtube&amp;sver=3&amp;ratebypass=yes&amp;ipbits=0&amp;lmt=1445456922621266&amp;upn=9x-KL1xuQok&amp;expire=1446395401&amp;itag=22&amp;mime=video/mp4&amp;dur=170.062&amp;fexp=9407117,9408710,9409206,9413123,9414764,9416126,9417367,9417707,9419788,9421166,9421665,9421911,9422596,9422910&amp;sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&amp;mt=1446373659&amp;pl=26&amp;mv=m&amp;id=o-AHp_rmyG_-tvTvDK-3AXhICSymyXe0R9GQvAKvMlfl5z&amp;ms=au&amp;mm=31&amp;mn=sn-tt17dnee&amp;key=yt6&amp;ip=107.178.195.236&amp;mnta&amp;signature=4E644EA520AFB72901E0942260FC644FC7109C8A.87C08F7233C49823AEBEC1B0E48F1B046695B5E8&amp;title=Mar+Jaayen+-+Loveshhuda+%7C+Latest+Bollywood+Song+I+Girish+Kumar%2C+Navneet+Dhillon+%7C+Atif%2C+Mithoon&amp;extension=mp4" class="btn btn-primary btn-block p720">
+<a href="http://youpak.com/videoplayback?sparams=dur,id,ip,ipbits,itag,lmt,mime,ratebypass,source,upn,expire&source=youtube&ipbits=0&sver=3&expire=1447112086&dur=0.000&id=7473f1919ed2fc7f&upn=mQRmQN7EfQc&fexp=9408210,9408710,9414764,9416126,9416903,9417683,9417707,9418145,9419444,9420017,9420453,9421709,9422141,9422596,9422618,9422675,9423245,9423292,9423509,9423644,9423662,9423791&mime=video/webm&lmt=1439358080619744&key=yt6&ip=107.178.194.103&itag=43&ratebypass=yes&mnta&signature=A04C0F9E4298B861D7A0F51D9F27AC42E1749CEE.48BD0FB8404498D062203CA6E0011AF3E7EDFCD4" class="btn btn-primary btn-block p720">
 720P HD (mp4)
-</a><a href="https://r1---sn-tt17dnee.c.docs.google.com/videoplayback?source=youtube&amp;sver=3&amp;ratebypass=yes&amp;ipbits=0&amp;lmt=1445456810686044&amp;upn=9x-KL1xuQok&amp;expire=1446395401&amp;itag=18&amp;mime=video/mp4&amp;dur=170.062&amp;fexp=9407117,9408710,9409206,9413123,9414764,9416126,9417367,9417707,9419788,9421166,9421665,9421911,9422596,9422910&amp;sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&amp;mt=1446373659&amp;pl=26&amp;mv=m&amp;id=o-AHp_rmyG_-tvTvDK-3AXhICSymyXe0R9GQvAKvMlfl5z&amp;ms=au&amp;mm=31&amp;mn=sn-tt17dnee&amp;key=yt6&amp;ip=107.178.195.236&amp;mnta&amp;signature=27A935559BA3BF0BE36429A900F8591CBECA3115.68141969657D0A02F99B8DF5A1C6FDFC8DEA02EB&amp;title=Mar+Jaayen+-+Loveshhuda+%7C+Latest+Bollywood+Song+I+Girish+Kumar%2C+Navneet+Dhillon+%7C+Atif%2C+Mithoon&amp;extension=mp4" class="btn btn-warning btn-block">
+</a><a href="http://youpak.com/videoplayback?sparams=dur,id,ip,ipbits,itag,lmt,mime,ratebypass,source,upn,expire&source=youtube&ipbits=0&sver=3&expire=1447112086&dur=0.000&id=7473f1919ed2fc7f&upn=mQRmQN7EfQc&fexp=9408210,9408710,9414764,9416126,9416903,9417683,9417707,9418145,9419444,9420017,9420453,9421709,9422141,9422596,9422618,9422675,9423245,9423292,9423509,9423644,9423662,9423791&mime=video/webm&lmt=1439358080619744&key=yt6&ip=107.178.194.103&itag=43&ratebypass=yes&mnta&signature=A04C0F9E4298B861D7A0F51D9F27AC42E1749CEE.48BD0FB8404498D062203CA6E0011AF3E7EDFCD4" class="btn btn-warning btn-block">
 360P (mp4)
-</a><a href="https://r1---sn-tt17dnee.c.docs.google.com/videoplayback?sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,source,upn,expire&amp;source=youtube&amp;fexp=9407117,9408710,9409206,9413123,9414764,9416126,9417367,9417707,9419788,9421166,9421665,9421911,9422596,9422910&amp;dur=170.109&amp;sver=3&amp;expire=1446395401&amp;mt=1446373659&amp;pl=26&amp;mv=m&amp;id=o-AHp_rmyG_-tvTvDK-3AXhICSymyXe0R9GQvAKvMlfl5z&amp;ms=au&amp;ipbits=0&amp;mm=31&amp;key=yt6&amp;lmt=1445456805779644&amp;itag=36&amp;mime=video/3gpp&amp;ip=107.178.195.236&amp;upn=9x-KL1xuQok&amp;mn=sn-tt17dnee&amp;mnta&amp;signature=61B785A2EE2F409FCB8FEC370064698B3F56EFD3.56989B9D76F18B78EFF272F95BF4903DFBCE7266&amp;title=Mar+Jaayen+-+Loveshhuda+%7C+Latest+Bollywood+Song+I+Girish+Kumar%2C+Navneet+Dhillon+%7C+Atif%2C+Mithoon&amp;extension=3gp" class="btn btn-default btn-block">
+</a><a href="http://youpak.com/videoplayback?sparams=dur,id,ip,ipbits,itag,lmt,mime,ratebypass,source,upn,expire&source=youtube&ipbits=0&sver=3&expire=1447112086&dur=0.000&id=7473f1919ed2fc7f&upn=mQRmQN7EfQc&fexp=9408210,9408710,9414764,9416126,9416903,9417683,9417707,9418145,9419444,9420017,9420453,9421709,9422141,9422596,9422618,9422675,9423245,9423292,9423509,9423644,9423662,9423791&mime=video/webm&lmt=1439358080619744&key=yt6&ip=107.178.194.103&itag=43&ratebypass=yes&mnta&signature=A04C0F9E4298B861D7A0F51D9F27AC42E1749CEE.48BD0FB8404498D062203CA6E0011AF3E7EDFCD4" class="btn btn-default btn-block">
 240P Mobile (3gp)
 </a> </div>
 </div>
@@ -280,14 +291,14 @@ function Loadrelated(token, ad){
 </div>
 <div class="videoWrapper">
 <video id="videoholder" controls autoplay preload="auto" onerror="failed(event)" class="video-js vjs-default-skin">
-<source src="https://r1---sn-tt17dnee.c.docs.google.com/videoplayback?sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,source,upn,expire&amp;source=youtube&amp;fexp=9407117,9408710,9409206,9413123,9414764,9416126,9417367,9417707,9419788,9421166,9421665,9421911,9422596,9422910&amp;dur=170.031&amp;sver=3&amp;expire=1446395401&amp;mt=1446373659&amp;pl=26&amp;mv=m&amp;id=o-AHp_rmyG_-tvTvDK-3AXhICSymyXe0R9GQvAKvMlfl5z&amp;ms=au&amp;ipbits=0&amp;mm=31&amp;key=yt6&amp;lmt=1445456813389932&amp;itag=5&amp;mime=video/x-flv&amp;ip=107.178.195.236&amp;upn=9x-KL1xuQok&amp;mn=sn-tt17dnee&amp;mnta&amp;signature=6789F7E5C799FD5134E6693F6F93F5BE721C2783.C4B4C333821CCA58A06FC3B769C13835D112D033" type="video/x-flv" data-res="240p"/><source src="https://r1---sn-tt17dnee.c.docs.google.com/videoplayback?source=youtube&amp;sver=3&amp;ratebypass=yes&amp;ipbits=0&amp;lmt=1445456810686044&amp;upn=9x-KL1xuQok&amp;expire=1446395401&amp;itag=18&amp;mime=video/mp4&amp;dur=170.062&amp;fexp=9407117,9408710,9409206,9413123,9414764,9416126,9417367,9417707,9419788,9421166,9421665,9421911,9422596,9422910&amp;sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&amp;mt=1446373659&amp;pl=26&amp;mv=m&amp;id=o-AHp_rmyG_-tvTvDK-3AXhICSymyXe0R9GQvAKvMlfl5z&amp;ms=au&amp;mm=31&amp;mn=sn-tt17dnee&amp;key=yt6&amp;ip=107.178.195.236&amp;mnta&amp;signature=27A935559BA3BF0BE36429A900F8591CBECA3115.68141969657D0A02F99B8DF5A1C6FDFC8DEA02EB" type="video/mp4" data-res="360p"/><source src="https://r1---sn-tt17dnee.c.docs.google.com/videoplayback?source=youtube&amp;sver=3&amp;ratebypass=yes&amp;ipbits=0&amp;lmt=1445457665428170&amp;upn=9x-KL1xuQok&amp;expire=1446395401&amp;itag=43&amp;mime=video/webm&amp;dur=0.000&amp;fexp=9407117,9408710,9409206,9413123,9414764,9416126,9417367,9417707,9419788,9421166,9421665,9421911,9422596,9422910&amp;sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&amp;mt=1446373659&amp;pl=26&amp;mv=m&amp;id=o-AHp_rmyG_-tvTvDK-3AXhICSymyXe0R9GQvAKvMlfl5z&amp;ms=au&amp;mm=31&amp;mn=sn-tt17dnee&amp;key=yt6&amp;ip=107.178.195.236&amp;mnta&amp;signature=96FC298E273DB30B2B1863EA26E15AD601272FFE.9F7D000183B0815D9394F5992E998C280B2D6F70" type="video/webm" data-res="360p"/><source src="https://r4---sn-tt17rn7d.c.docs.google.com/videoplayback?ip=107.178.194.121&mv=m&sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&mt=1447089550&ms=au&mn=sn-tt17rn7d&mm=31&pl=27&id=o-AI2TOIo2Bq_2jk12JRTRZNQDvEU3C_jU867LOau3bZTc&lmt=1439358080619744&itag=43&source=youtube&upn=mXNclBEobBc&key=yt6&mime=video/webm&expire=1447111196&dur=0.000&ipbits=0&sver=3&fexp=9407002,9408710,9412777,9414764,9416126,9417683,9417707,9418204,9419444,9420453,9420481,9420540,9421353,9422596,9422618,9423431,9423488,9423519,9423645,9423662,9423792,9423992&ratebypass=yes&mnta&signature=2D9CA9264EF2676ABF7F29FD9ECE1CCE67522CAC.726B915A21582FE502CF250783F73E2C61D8CE62" type="video/mp4" data-res="720p"/> </video>
+<source src="https://r4---sn-tt17rn7d.c.docs.google.com/videoplayback?dur=128.888&mv=m&source=youtube&ms=au&itag=5&lmt=1439355196933251&sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,source,upn,expire&expire=1447111872&upn=nEXsRZwdKS0&ip=107.178.195.194&pl=27&mime=video/x-flv&sver=3&mt=1447090136&fexp=9408013,9408212,9408710,9412927,9414764,9416126,9417683,9417707,9418356,9419446,9420453,9420771,9422372,9422596,9422618,9423040,9423294,9423431,9423512,9423644,9423662,9423789&mn=sn-tt17rn7d&mm=31&ipbits=0&key=yt6&id=o-AD__laYJhwvWhhpJBT7wV7UL7saHGjtIh92Pq-Bw3-h1&mnta&signature=9E177DFF2E7DD1E6BBD3381D837A5BDBCD5CE1C1.D7C0E142ED2F03CD468871EE3A077A1C50C3F32D" type="video/x-flv" data-res="240p"/><source src="https://r4---sn-tt17rn7d.c.docs.google.com/videoplayback?dur=128.893&mv=m&mt=1447090136&ms=au&ip=107.178.195.194&mn=sn-tt17rn7d&fexp=9408013,9408212,9408710,9412927,9414764,9416126,9417683,9417707,9418356,9419446,9420453,9420771,9422372,9422596,9422618,9423040,9423294,9423431,9423512,9423644,9423662,9423789&mm=31&ipbits=0&id=o-AD__laYJhwvWhhpJBT7wV7UL7saHGjtIh92Pq-Bw3-h1&lmt=1439635030055205&expire=1447111872&upn=nEXsRZwdKS0&sver=3&source=youtube&pl=27&mime=video/mp4&key=yt6&itag=18&sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ratebypass=yes&mnta&signature=13244C26E292C7265F00EC3D02EBA2B29D10A005.5C36BCADE71F946AF3D239F4DC28C97F0B8798A2" type="video/mp4" data-res="360p"/><source src="https://r4---sn-tt17rn7d.c.docs.google.com/videoplayback?dur=0.000&mv=m&mt=1447090136&ms=au&ip=107.178.195.194&mn=sn-tt17rn7d&fexp=9408013,9408212,9408710,9412927,9414764,9416126,9417683,9417707,9418356,9419446,9420453,9420771,9422372,9422596,9422618,9423040,9423294,9423431,9423512,9423644,9423662,9423789&mm=31&ipbits=0&id=o-AD__laYJhwvWhhpJBT7wV7UL7saHGjtIh92Pq-Bw3-h1&lmt=1439358080619744&expire=1447111872&upn=nEXsRZwdKS0&sver=3&source=youtube&pl=27&mime=video/webm&key=yt6&itag=43&sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ratebypass=yes&mnta&signature=D537A99F10AD7F8A2066F81A96736E6C25C0FBDD.914F21F8DB3FEE5B01E9353636E94B90C14A4548" type="video/webm" data-res="360p"/><source src="https://r4---sn-tt17rn7d.c.docs.google.com/videoplayback?dur=128.893&mv=m&mt=1447090136&ms=au&ip=107.178.195.194&mn=sn-tt17rn7d&fexp=9408013,9408212,9408710,9412927,9414764,9416126,9417683,9417707,9418356,9419446,9420453,9420771,9422372,9422596,9422618,9423040,9423294,9423431,9423512,9423644,9423662,9423789&mm=31&ipbits=0&id=o-AD__laYJhwvWhhpJBT7wV7UL7saHGjtIh92Pq-Bw3-h1&lmt=1439635039366823&expire=1447111872&upn=nEXsRZwdKS0&sver=3&source=youtube&pl=27&mime=video/mp4&key=yt6&itag=22&sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ratebypass=yes&mnta&signature=1D98F0291115ED286DCC9BC3C9A1EF81F553EE76.DEB8959B883E09A7BDEF4EFACFB5A98C5AC85CAB" type="video/mp4" data-res="720p"/> </video>
 </div>
 <div>
 <div class="video-title">Mar Jaayen - Loveshhuda | Latest Bollywood Song I Girish Kumar, Navneet Dhillon | Atif, Mithoon</div>
 <div class="row">
 <div class="channelDetails col-sm-8">
 <a href="channelbd30.html?id=UCJrDMFOdv1I2k8n9oK_V21w">
-<img src="//yt3.googleusercontent.com/-somrUubvTcc/AAAAAAAAAAI/AAAAAAAAAAA/qkf3SJhH3MI/s240-c-k-no/photo.png" class="channelThumb" alt="Tips Music">
+<img src="../yt3.googleusercontent.com/-somrUubvTcc/AAAAAAAAAAI/AAAAAAAAAAA/qkf3SJhH3MI/s240-c-k-no/photo.png" class="channelThumb" alt="Tips Music">
 </a>
 <a class="uploader-name" href="channelbd30.html?id=UCJrDMFOdv1I2k8n9oK_V21w">Tips Music</a>
 <div style="margin-top:4px">
@@ -444,8 +455,8 @@ function Loadrelated(token, ad){
 </div>
 <a class="loadrelated" style="display:none;text-decoration: none;" data-next>Show More</a>
 </div>
-
-
+</div>
+</div>
 @stop
 
 
