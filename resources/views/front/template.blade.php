@@ -59,6 +59,26 @@
   </script>
 </head>
 <body>
+    <div id="sharebox" class="modal fade" style="display: none;" aria-hidden="true">
+<div class="modal-dialog modal-md" style="width: 400px;">
+<div class="modal-content">
+<div class="row">
+<div class="col-md-12 col-xs-12">
+<div class="modal-body text-center">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: -18px;margin-right: -12px;">
+<span aria-hidden="true">×</span>
+</button>
+<img src="http://ytimg.googleusercontent.com/vi/dHPxkZ7S_H8/0.jpg" style="float: left;width: 355px;margin-bottom:5px;">
+<h3 style="margin: 0 -8px -5px 0;display:block">Liked this video? share it with your friends! </h3>
+<a class="btn btn-block btn-social btn-facebook" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=http://www.youpak.com/watch?v=dHPxkZ7S_H8','','fullscreen')" style="float: left;margin-top: 10px;margin-bottom: 10px;">
+<i class="fa fa-facebook"></i> Share this video on facebook
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="navbar navbar-default navbar-fixed-top bs-docs-nav" role="banner">
 <div class="container">
 <div class="navbar-header">
