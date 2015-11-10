@@ -16,7 +16,7 @@ class SearchController extends Controller
      */
     public function index()
     {
-        return view('front.search.index');
+        return view('front.search.search');
         //
     }
 

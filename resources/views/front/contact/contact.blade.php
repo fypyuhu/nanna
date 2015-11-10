@@ -1,51 +1,8 @@
 @extends('front.template')
 
 @section('main')
-<script>
-    $(document).ready(function(){
-       $( "#loadvideos" ).click(function(){
-                  loadvideos($('#loadvideos').data('next'));
-       });
-    });
-     function loadvideos(next){
-                    $('#loadvideos').html('<i class="fa fa-spinner fa-spin"></i> Loading...');
-                      $('#loadvideos').addClass('disabled');
-                     $.ajax({
-                        type: "GET", 
-                                      url: "process/getvideos",
-                        data: { type: 'channel',id:'UCwTgOPHFN_K5vRDZFxvAPPQ',order:'date',token:next},
-                        dataType: "json",
-                        success: function(response){
-                        $('#results').append(response.html);  
-                        if(response.nexttoken){
-                          $('#loadvideos').html('Load more').removeClass('disabled').show().data('next', response.nexttoken);
-                        }else{
-                          $('#loadvideos').html('End of Videos');
-                        }
-                      },   
-                      error: function(XMLHttpRequest,textStatus,errorThrown) {
-                        setTimeout(function(){
-                         loadvideos(next);
-                        },5000);    
-                     }
-                    });
-                  }; 
-                  $(window).scroll(function(){
-                    if  ( $(window).scrollTop() == $(document).height() - $(window).height() && !$( "#loadvideos" ).hasClass( "disabled" ) ){
-                        $('#loadvideos').click();   
-                    }
-                  }); 
-                          $(document).ready(function(){                
-                      $('#subscribeButton').click(function(){
-                     $('#loginbox').modal({remote: 'account',show: true});
-                  });
-                });
-                </script>
 
 
-
-
-<div class="col-md-8 row-border">
     <div class="adBox adtray-728">
 
 
@@ -56,13 +13,7 @@
         <div class="page-heading-nav">
             
         <div class="pagehead">
-            <form action="http://www.youpak.com/search" id="searchmobile" style="display:none;" role="form" class="navbar-form navbar-search">
-                <span class="twitter-typeahead" style="position: relative; display: inline-block;">
-                    <input id="searchInput" type="text" class="search-input form-control typeahead tt-query" placeholder="Search Videos / Youtube video link" name="q" value="">
-                    <input type="hidden" value="type">
-                    <button type="submit" class="btn navbar-search-btn"><i class="fa fa-search btn-bg-blue"></i></button>
-                </span>
-            </form>
+     @include('front.partials.msearch')
             <div class="page-heading">Search Results</div>
             <div class="btn-group pull-left margin-top-10 margin-bottom-5">
                 <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">

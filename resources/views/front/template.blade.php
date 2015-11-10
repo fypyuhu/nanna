@@ -87,11 +87,11 @@
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </button>
-<a href="index.html" class="navbar-brand logo"><img src="assets/images/logo4e44.png?ver=1.3" height="25"/></a>
+<a href="{!!route('home')!!}" class="navbar-brand logo"><img src="assets/images/logo4e44.png?ver=1.3" height="25"/></a>
 </div>
 <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 <div class="col-lg-6 col-md-6 col-sm-6">
-<form action="search.html" id="search" role="form" class="navbar-form navbar-left navbar-search">
+<form action="{!!route('search.index')!!}" id="search" role="form" class="navbar-form navbar-left navbar-search">
 <span class="twitter-typeahead" style="position: relative; display: inline-block;">
 <input id="searchInput" type="text" class="search-input form-control typeahead tt-query" placeholder="Search Videos / Youtube video link" name="q" value="">
 <input type="hidden" value="type">
@@ -100,8 +100,21 @@
 </form>
 </div>
 <ul class="nav navbar-nav navbar-right">
-<li><a id="upload-btn" href="#" data-remote="account" data-target="#loginbox" data-toggle="modal"><div class="upload-toggle"><div>Upload</div></div></a></li>
-<li><a id="login-btn" href="#" data-remote="account" data-target="#loginbox" data-toggle="modal"><div class="login-toggle"><i class="fa fa-google-plus g-icon-handle"></i><div>Sign in</div></div></a></li>
+<li>
+    <a id="upload-btn" href="#" data-remote="account" data-target="#loginbox" data-toggle="modal">
+        
+        <div class="upload-toggle"><div>Upload</div></div>
+    
+    </a>
+</li>
+<li>
+    <a id="login-btn" href="#" data-remote="account" data-target="#loginbox" data-toggle="modal">
+        
+        <div class="login-toggle"><i class="fa fa-google-plus g-icon-handle"></i><div>Sign in</div></div>
+    
+    </a>
+
+</li>
 </ul>
 </nav>
 </div>

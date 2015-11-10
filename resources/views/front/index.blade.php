@@ -250,32 +250,18 @@
 </ul>
 <div id="unhide" align="center" style="margin-bottom:25px;display:none;"><a class="unhide" onclick="unhide('div-most-viewed')">Click here to Unhide this section</a></div>
 </div>
-<div class="adBox adtray-7281"><iframe src="http://albums.apnipie.com/7281/Shades-draws" scrolling="no" frameborder="0"></iframe></div><script>
-     function adtray_7281() {
-    var pages = ["actor-Bill","AVG-To-Buy-Family-Focused-Mobile-Security","don-lawn","Shades-draws","Wenger-wary"]; 
-      var randompages = pages[Math.floor(Math.random() * pages.length)];
-       $(".adtray-7281").html('<iframe src="//albums.apnipie.com/7281/'+randompages+'" scrolling="no" frameborder="0"></iframe>')
-    }
-     (function loop_7281() {
-        var miliseconds = ["90000", "120100", "150600", "210000", "185000", "220000", "250000", "230000", "240040", "60000", "80000", "110000", "130600", "270000", "300000", "320000", "330000", "360080", "388000", "404000", "458700", "590267"]; 
-        var randomseconds = miliseconds[Math.floor(Math.random() * miliseconds.length)];
-  
-    setTimeout(function() {
-            adtray_7281();
-            loop_7281();  
-    }, randomseconds);
-    }());
-     </script> </div>
+
+
+
+
+
+</div>
 <div class="col-md-4">
-<div class="adBox adtray-250"><iframe src="http://article.axtender.com/250/Mesothelioma-Law-Firm" scrolling="no" frameborder="0"></iframe></div> <div class="like-box-hide">
-<script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'http://connect.facebook.net/en_US/sdk.js#xfbml=1&appId=334186876754714&version=v2.0';
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-<div class='fb-page' data-href='https://www.facebook.com/youpakistan' data-hide-cover='false' data-show-facepile='true' data-show-posts='false'><div class='fb-xfbml-parse-ignore'></div></div> </div>
+@include('front.partials.adleft')    
+
+@include('front.partials.fbwgt')    
+
+
 </div>
 </div>
 </div>

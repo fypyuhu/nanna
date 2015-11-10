@@ -13,13 +13,7 @@
         <div class="page-heading-nav">
             
         <div class="pagehead">
-            <form action="http://www.youpak.com/search" id="searchmobile" style="display:none;" role="form" class="navbar-form navbar-search">
-                <span class="twitter-typeahead" style="position: relative; display: inline-block;">
-                    <input id="searchInput" type="text" class="search-input form-control typeahead tt-query" placeholder="Search Videos / Youtube video link" name="q" value="">
-                    <input type="hidden" value="type">
-                    <button type="submit" class="btn navbar-search-btn"><i class="fa fa-search btn-bg-blue"></i></button>
-                </span>
-            </form>
+             @include('front.partials.msearch')
             <div class="page-heading">Search Results</div>
             <div class="btn-group pull-left margin-top-10 margin-bottom-5">
                 <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">

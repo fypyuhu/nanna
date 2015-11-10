@@ -145,7 +145,7 @@ return [
 		App\Providers\RouteServiceProvider::class,
 		App\Services\Html\HtmlServiceProvider::class,
 		Bestmomo\Filemanager\FilemanagerServiceProvider::class,
-
+            'Alaouy\Youtube\YoutubeServiceProvider',
 	],
 
 	/*

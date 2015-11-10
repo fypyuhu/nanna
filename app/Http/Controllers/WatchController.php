@@ -16,7 +16,7 @@ class WatchController extends Controller
      */
     public function index()
     {
-        return view('front.watch.index');
+        return view('front.watch.watch');
         //
     }
 

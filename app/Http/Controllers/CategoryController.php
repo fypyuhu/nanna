@@ -16,7 +16,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('front.category.index');
+        return view('front.category.category');
         //
     }
 

@@ -258,13 +258,7 @@ function Loadrelated(token, ad){
 </script>
 <div class="col-md-8 row-border">
 <div class="margin-top-10">
-<form action="http://www.youpak.com/search" id="searchmobile" style="display:none;" role="form" class="navbar-form navbar-search">
-<span class="twitter-typeahead" style="position: relative; display: inline-block;">
-<input id="searchInput" type="text" class="search-input form-control typeahead tt-query" placeholder="Search Videos / Youtube video link" name="q" value="">
-<input type="hidden" value="type">
-<button type="submit" class="btn navbar-search-btn"><i class="fa fa-search btn-bg-blue"></i></button>
-</span>
-</form>
+ @include('front.partials.msearch')
 </div>
 <div class="row">
 <div class="col-lg-12">
@@ -291,7 +285,11 @@ function Loadrelated(token, ad){
 </div>
 <div class="videoWrapper">
 <video id="videoholder" controls autoplay preload="auto" onerror="failed(event)" class="video-js vjs-default-skin">
-<source src="https://r4---sn-tt17rn7d.c.docs.google.com/videoplayback?dur=128.888&mv=m&source=youtube&ms=au&itag=5&lmt=1439355196933251&sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,source,upn,expire&expire=1447111872&upn=nEXsRZwdKS0&ip=107.178.195.194&pl=27&mime=video/x-flv&sver=3&mt=1447090136&fexp=9408013,9408212,9408710,9412927,9414764,9416126,9417683,9417707,9418356,9419446,9420453,9420771,9422372,9422596,9422618,9423040,9423294,9423431,9423512,9423644,9423662,9423789&mn=sn-tt17rn7d&mm=31&ipbits=0&key=yt6&id=o-AD__laYJhwvWhhpJBT7wV7UL7saHGjtIh92Pq-Bw3-h1&mnta&signature=9E177DFF2E7DD1E6BBD3381D837A5BDBCD5CE1C1.D7C0E142ED2F03CD468871EE3A077A1C50C3F32D" type="video/x-flv" data-res="240p"/><source src="https://r4---sn-tt17rn7d.c.docs.google.com/videoplayback?dur=128.893&mv=m&mt=1447090136&ms=au&ip=107.178.195.194&mn=sn-tt17rn7d&fexp=9408013,9408212,9408710,9412927,9414764,9416126,9417683,9417707,9418356,9419446,9420453,9420771,9422372,9422596,9422618,9423040,9423294,9423431,9423512,9423644,9423662,9423789&mm=31&ipbits=0&id=o-AD__laYJhwvWhhpJBT7wV7UL7saHGjtIh92Pq-Bw3-h1&lmt=1439635030055205&expire=1447111872&upn=nEXsRZwdKS0&sver=3&source=youtube&pl=27&mime=video/mp4&key=yt6&itag=18&sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ratebypass=yes&mnta&signature=13244C26E292C7265F00EC3D02EBA2B29D10A005.5C36BCADE71F946AF3D239F4DC28C97F0B8798A2" type="video/mp4" data-res="360p"/><source src="https://r4---sn-tt17rn7d.c.docs.google.com/videoplayback?dur=0.000&mv=m&mt=1447090136&ms=au&ip=107.178.195.194&mn=sn-tt17rn7d&fexp=9408013,9408212,9408710,9412927,9414764,9416126,9417683,9417707,9418356,9419446,9420453,9420771,9422372,9422596,9422618,9423040,9423294,9423431,9423512,9423644,9423662,9423789&mm=31&ipbits=0&id=o-AD__laYJhwvWhhpJBT7wV7UL7saHGjtIh92Pq-Bw3-h1&lmt=1439358080619744&expire=1447111872&upn=nEXsRZwdKS0&sver=3&source=youtube&pl=27&mime=video/webm&key=yt6&itag=43&sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ratebypass=yes&mnta&signature=D537A99F10AD7F8A2066F81A96736E6C25C0FBDD.914F21F8DB3FEE5B01E9353636E94B90C14A4548" type="video/webm" data-res="360p"/><source src="https://r4---sn-tt17rn7d.c.docs.google.com/videoplayback?dur=128.893&mv=m&mt=1447090136&ms=au&ip=107.178.195.194&mn=sn-tt17rn7d&fexp=9408013,9408212,9408710,9412927,9414764,9416126,9417683,9417707,9418356,9419446,9420453,9420771,9422372,9422596,9422618,9423040,9423294,9423431,9423512,9423644,9423662,9423789&mm=31&ipbits=0&id=o-AD__laYJhwvWhhpJBT7wV7UL7saHGjtIh92Pq-Bw3-h1&lmt=1439635039366823&expire=1447111872&upn=nEXsRZwdKS0&sver=3&source=youtube&pl=27&mime=video/mp4&key=yt6&itag=22&sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ratebypass=yes&mnta&signature=1D98F0291115ED286DCC9BC3C9A1EF81F553EE76.DEB8959B883E09A7BDEF4EFACFB5A98C5AC85CAB" type="video/mp4" data-res="720p"/> </video>
+<source src="http://ytpass.com/download.php?mime=video/mp4&title=ASD%3AasDA%3AsdAS%3ADAS&token=aHR0cDovL3IxMi0tLXNuLWFiNWw2bmVsLmdvb2dsZXZpZGVvLmNvbS92aWRlb3BsYXliYWNrP21pbWU9dmlkZW8vbXA0JnVwbj1vQVduMDJ1bExKdyZtbj1zbi1hYjVsNm5lbCZtbT0zMSZpcGJpdHM9MCZtdj1tJmZleHA9OTQwODcxMCw5NDA5MTI5LDk0MTQ3NjQsOTQxNjEyNiw5NDE3NjgzLDk0MTc3MDcsOTQxODIwMCw5NDE4NDAxLDk0MTg3NDksOTQxOTQ0Niw5NDIwNDUzLDk0MjIzMzEsOTQyMjU5Niw5NDIyNjE4LDk0MjMyMzIsOTQyMzUxMCw5NDIzNjQ1LDk0MjM2NjIsOTQyMzc5Miw5NDI0MDkwLDk0MjQxMzQsOTQyNDE2MyZtdD0xNDQ3MTc2NDEyJm1zPWF1JnNwYXJhbXM9ZHVyLGlkLGluaXRjd25kYnBzLGlwLGlwYml0cyxpdGFnLGxtdCxtaW1lLG1tLG1uLG1zLG12LHBsLHJhdGVieXBhc3Msc291cmNlLHVwbixleHBpcmUmZHVyPTguMTI2JmV4cGlyZT0xNDQ3MTk4MTM2JnN2ZXI9MyZpbml0Y3duZGJwcz04NDMyNTAwJmlwPTEwNC4xMzEuMjcuMjIzJmtleT15dDYmcGw9MjQmc291cmNlPXlvdXR1YmUmcmF0ZWJ5cGFzcz15ZXMmaXRhZz0yMiZpZD1vLUFPV0d6MkFWRnk3ejBWNEpsR0VSN2xnWG1hTEJVaEZnaGNkUDlKcTFfeHF4JmxtdD0xMzg3NzI2ODY4NDE5MDQ4JnNpZ25hdHVyZT01ODI1NTMxNkYwM0QyQzgzRDI3MTM4N0YwQURGOEI5QkZFMDk1QUI5LjVGNEJGODk3NURFOTgxRDMzOEZGM0M4NzYyRUUwQjc1RDI3M0JCQUMmc2lnbmF0dXJlPQ==" type="video/x-flv" data-res="240p"/>
+
+<source src="https://r4---sn-tt17rn7d.c.docs.google.com/videoplayback?dur=128.893&mv=m&mt=1447090136&ms=au&ip=107.178.195.194&mn=sn-tt17rn7d&fexp=9408013,9408212,9408710,9412927,9414764,9416126,9417683,9417707,9418356,9419446,9420453,9420771,9422372,9422596,9422618,9423040,9423294,9423431,9423512,9423644,9423662,9423789&mm=31&ipbits=0&id=o-AD__laYJhwvWhhpJBT7wV7UL7saHGjtIh92Pq-Bw3-h1&lmt=1439635030055205&expire=1447111872&upn=nEXsRZwdKS0&sver=3&source=youtube&pl=27&mime=video/mp4&key=yt6&itag=18&sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ratebypass=yes&mnta&signature=13244C26E292C7265F00EC3D02EBA2B29D10A005.5C36BCADE71F946AF3D239F4DC28C97F0B8798A2" type="video/mp4" data-res="360p"/>
+
+<source src="https://r4---sn-tt17rn7d.c.docs.google.com/videoplayback?dur=0.000&mv=m&mt=1447090136&ms=au&ip=107.178.195.194&mn=sn-tt17rn7d&fexp=9408013,9408212,9408710,9412927,9414764,9416126,9417683,9417707,9418356,9419446,9420453,9420771,9422372,9422596,9422618,9423040,9423294,9423431,9423512,9423644,9423662,9423789&mm=31&ipbits=0&id=o-AD__laYJhwvWhhpJBT7wV7UL7saHGjtIh92Pq-Bw3-h1&lmt=1439358080619744&expire=1447111872&upn=nEXsRZwdKS0&sver=3&source=youtube&pl=27&mime=video/webm&key=yt6&itag=43&sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ratebypass=yes&mnta&signature=D537A99F10AD7F8A2066F81A96736E6C25C0FBDD.914F21F8DB3FEE5B01E9353636E94B90C14A4548" type="video/webm" data-res="360p"/><source src="https://r4---sn-tt17rn7d.c.docs.google.com/videoplayback?dur=128.893&mv=m&mt=1447090136&ms=au&ip=107.178.195.194&mn=sn-tt17rn7d&fexp=9408013,9408212,9408710,9412927,9414764,9416126,9417683,9417707,9418356,9419446,9420453,9420771,9422372,9422596,9422618,9423040,9423294,9423431,9423512,9423644,9423662,9423789&mm=31&ipbits=0&id=o-AD__laYJhwvWhhpJBT7wV7UL7saHGjtIh92Pq-Bw3-h1&lmt=1439635039366823&expire=1447111872&upn=nEXsRZwdKS0&sver=3&source=youtube&pl=27&mime=video/mp4&key=yt6&itag=22&sparams=dur,id,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ratebypass=yes&mnta&signature=1D98F0291115ED286DCC9BC3C9A1EF81F553EE76.DEB8959B883E09A7BDEF4EFACFB5A98C5AC85CAB" type="video/mp4" data-res="720p"/> </video>
 </div>
 <div>
 <div class="video-title">Mar Jaayen - Loveshhuda | Latest Bollywood Song I Girish Kumar, Navneet Dhillon | Atif, Mithoon</div>
@@ -432,24 +430,17 @@ function Loadrelated(token, ad){
 <div style="display:none;" class="more-comments" data-nexttoken>show more comments</div>
 <div id="comments-msg" align="center"><i class="fa fa-spinner fa-spin"></i> Loading...</div>
 </div>
-<div class="adBox adtray-7281"><iframe src="http://albums.apnipie.com/7281/don-lawn" scrolling="no" frameborder="0"></iframe></div><script>
-     function adtray_7281() {
-    var pages = ["actor-Bill","AVG-To-Buy-Family-Focused-Mobile-Security","don-lawn","Shades-draws","Wenger-wary"]; 
-      var randompages = pages[Math.floor(Math.random() * pages.length)];
-       $(".adtray-7281").html('<iframe src="//albums.apnipie.com/7281/'+randompages+'" scrolling="no" frameborder="0"></iframe>')
-    }
-     (function loop_7281() {
-        var miliseconds = ["90000", "120100", "150600", "210000", "185000", "220000", "250000", "230000", "240040", "60000", "80000", "110000", "130600", "270000", "300000", "320000", "330000", "360080", "388000", "404000", "458700", "590267"]; 
-        var randomseconds = miliseconds[Math.floor(Math.random() * miliseconds.length)];
-  
-    setTimeout(function() {
-            adtray_7281();
-            loop_7281();  
-    }, randomseconds);
-    }());
-     </script></div>
+
+
+
+
+
+</div>
 <div class="col-md-4">
-<div class="adBox adtray-250"><iframe src="http://article.axtender.com/250/Mesothelioma-Law-Firm" scrolling="no" frameborder="0"></iframe></div> <div class="related-videos-style">Related Videos</div>
+    
+    @include('front.partials.adleft')  
+
+<div class="related-videos-style">Related Videos</div>
 <div class="message">Loading...</div>
 <div id="sidebar">
 </div>
