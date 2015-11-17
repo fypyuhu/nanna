@@ -17,15 +17,15 @@
             <div class="col-md-8 row-border">
                 @include('front.partials.msearch')
 
-                @include('front.watch._download')
-                @include('front.watch._player')
-                @include('front.watch._info')
+                @include('front.watch._download',compact('video'))
+                @include('front.watch._player',compact('video'))
+                @include('front.watch._info',compact('video'))
                 @include('front.partials.bannerAd')
-                @include('front.watch._content')
-                @include('front.watch._comments')
+                @include('front.watch._content',compact('video'))
+                @include('front.watch._comments',compact('video'))
              </div>
            
-                @include('front.watch._related')
+                @include('front.watch._related',compact('video'))
 
 
                 @include('front.partials.bannerAd')

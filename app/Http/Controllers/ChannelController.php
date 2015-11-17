@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Alaouy\Youtube\Youtube;
 
 class ChannelController extends Controller
 {
@@ -14,8 +15,24 @@ class ChannelController extends Controller
      *
      * @return Response
      */
+    var $key;
+    public function logo($id,$key){
+        
+       
+        $Youtube  = new Youtube($key);
+                $channel = $Youtube->getChannelById($id);
+                
+               return $channel->snippet->thumbnails->default->url;
+    }
+    
     public function index()
     {
+          $this->key = "AIzaSyC-Ccw-tu3dmO-XnaonRyzRgAtCg0LqN8U";
+        $Youtube  = new Youtube($this->key);
+                $channel = $Youtube->getChannelById('UCFFbwnve3yF62-tVXkTyHqg');;
+                
+        //        print_r($channel);
+        return $this->logo('UCFFbwnve3yF62-tVXkTyHqg',"AIzaSyC-Ccw-tu3dmO-XnaonRyzRgAtCg0LqN8U");
         return view('front.channel.channel');
         //
     }
@@ -49,6 +66,7 @@ class ChannelController extends Controller
      */
     public function show($id)
     {
+      
         //
     }
 

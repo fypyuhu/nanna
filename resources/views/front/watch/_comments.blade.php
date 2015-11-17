@@ -10,7 +10,7 @@
 <div id="comments" class="comments">
         <div class="commentstoptoggle" style="display:none;">
         <div class="total-comments" style="display:none;">
-        <i class="fa fa-comments"></i>&nbsp;&nbsp;1493 Comments</div>
+        <i class="fa fa-comments"></i>&nbsp;&nbsp;{!!$video["cCount"]!!} Comments</div>
         <div id="commentsOrderButton" class="btn-group" style="display:none;">
         <a data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle" href="#" aria-expanded="false"><span id="commentsOrder">Top Comments</span> <span class="caret"></span>
         </a>
