@@ -54,17 +54,10 @@ Route::get('/download', function(){
 //$id = $_GET['id'];
 
 //$format = $_GET['fmt']; //the MIME type of the video. e.g. video/mp4, video/webm, etc.
-  $ip = ip();
- $opts = array(
-    'socket' => array(
-        // IP:PORT use 0 value if you want your operating system to decide
-        'bindto' => $ip.":80",
-    )
-);
+ 
 
-$context = stream_context_create($opts);
 
-parse_str(file_get_contents("http://youtube.com/get_video_info?video_id=".$id, false, $context),$info);     //decode the data
+parse_str(file_get_contents("http://youtube.com/get_video_info?video_id=".$id),$info);     //decode the data
 $streams = $info['url_encoded_fmt_stream_map']; //the video's location info
 $streams = explode(',',$streams);
 parse_str(urldecode($streams[0]),$data);  //In this example I am downloading only the first video

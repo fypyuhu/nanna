@@ -73,66 +73,26 @@
         </div>
         </div>
         <div id="results">
-                <div class='col-xs-12 videopost'>
-                <a class='title-color' href='watch.html' title='Fonseca Backstage at the 2015 Latin AMAs'>
+             @foreach($results as $result)
+       
+       
+            <div class='col-xs-12 videopost'>
+                <a class='title-color' href="{!!route('watch.index')!!}?v={!!$result->id->videoId!!}" title='{!!$result->snippet->title!!}'>
                     <div class='video-thumbs'>	
-                        <img class='videosthumbs-style' src='https://ytimg.googleusercontent.com/vi/2Y9cS19tSU0/mqdefault.jpg'>
+                        <img class='videosthumbs-style' src='{!!$result->snippet->thumbnails->default->url!!}'>
                         <div class='duration-toggle'>
                             <span class='duration'>02:55</span>
                         </div>
                     </div>
-                    <div class='title-style'>Fonseca Backstage at the 2015 Latin AMAs</div>
+                    <div class='title-style'>{!!$result->snippet->title!!}</div>
                 </a>
                 <div class='viewsanduser'>
-                    <span style='font-weight:bold;'>by <a class='by-user' href='channel.html'>Billboard</a><br/>Posted 3 weeks ago &lowast; Views: 405</span>
+                    <span style='font-weight:bold;'>by <a class='by-user' href="{!!route('channel.index')!!}?id={!!$result->snippet->channelId!!}">{!!$result->snippet->channelTitle!!}</a><br/>  Views: 405 <br> Published At: {!!$result->snippet->publishedAt!!}</span>
                 </div>
-                <div class='postdiscription'>Fonseca Backstage at the 2015 Latin AMAs</div>
+                <div class='postdiscription'>{!!$result->snippet->description!!}</div>
             </div>
-                <div class='col-xs-12 videopost'>
-                <a class='title-color' href='watch.html' title='Fonseca Backstage at the 2015 Latin AMAs'>
-                    <div class='video-thumbs'>	
-                        <img class='videosthumbs-style' src='https://ytimg.googleusercontent.com/vi/2Y9cS19tSU0/mqdefault.jpg'>
-                        <div class='duration-toggle'>
-                            <span class='duration'>02:53</span>
-                        </div>
-                    </div>
-                    <div class='title-style'>Fonseca Backstage at the 2015 Latin AMAs</div>
-                </a>
-                <div class='viewsanduser'>
-                    <span style='font-weight:bold;'>by <a class='by-user' href='channel.html'>Billboard</a><br/>Posted 3 weeks ago &lowast; Views: 405</span>
-                </div>
-                <div class='postdiscription'>Fonseca Backstage at the 2015 Latin AMAs</div>
-            </div>
-                <div class='col-xs-12 videopost'>
-                <a class='title-color' href='watch.html' title='Fonseca Backstage at the 2015 Latin AMAs'>
-                    <div class='video-thumbs'>	
-                        <img class='videosthumbs-style' src='https://ytimg.googleusercontent.com/vi/2Y9cS19tSU0/mqdefault.jpg'>
-                        <div class='duration-toggle'>
-                            <span class='duration'>02:55</span>
-                        </div>
-                    </div>
-                    <div class='title-style'>Fonseca Backstage at the 2015 Latin AMAs</div>
-                </a>
-                <div class='viewsanduser'>
-                    <span style='font-weight:bold;'>by <a class='by-user' href='channel.html'>Billboard</a><br/>Posted 3 weeks ago &lowast; Views: 405</span>
-                </div>
-                <div class='postdiscription'>Fonseca Backstage at the 2015 Latin AMAs</div>
-            </div>
-                <div class='col-xs-12 videopost'>
-                <a class='title-color' href='watch.html' title='Fonseca Backstage at the 2015 Latin AMAs'>
-                    <div class='video-thumbs'>	
-                        <img class='videosthumbs-style' src='https://ytimg.googleusercontent.com/vi/2Y9cS19tSU0/mqdefault.jpg'>
-                        <div class='duration-toggle'>
-                            <span class='duration'>02:55</span>
-                        </div>
-                    </div>
-                    <div class='title-style'>Fonseca Backstage at the 2015 Latin AMAs</div>
-                </a>
-                <div class='viewsanduser'>
-                    <span style='font-weight:bold;'>by <a class='by-user' href='channel.html'>Billboard</a><br/>Posted 3 weeks ago &lowast; Views: 405</span>
-                </div>
-                <div class='postdiscription'>Fonseca Backstage at the 2015 Latin AMAs</div>
-            </div>
+                
+              @endforeach
 
 
         </div>
