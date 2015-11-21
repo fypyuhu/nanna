@@ -25,10 +25,13 @@ class GoogleLogin
     $this->client->setDeveloperKey(\Config::get('google.api_key'));
     $this->client->setRedirectUri(\Config::get('app.url') . "/loginCallback");
     $this->client->setScopes([
-                                 'https://www.googleapis.com/auth/youtube',
-                               /*'https://www.googleapis.com/auth/youtube.readonly',
-                               'https://www.googleapis.com/auth/youtubepartner',
-                               'https://www.googleapis.com/auth/youtubepartner-channel-audit'*/
+                                'https://www.googleapis.com/auth/youtube',
+                                'https://www.googleapis.com/auth/youtube.readonly',
+                                'https://www.googleapis.com/auth/youtubepartner',
+                                'https://www.googleapis.com/auth/youtubepartner-channel-audit',
+                                'https://www.googleapis.com/auth/youtube.force-ssl',
+                                'https://www.googleapis.com/auth/youtube.upload'
+        /**/
                              ]);
     $this->client->setAccessType('offline');
   }
@@ -36,6 +39,8 @@ class GoogleLogin
   /**
    * @return string
    */
+  
+  
   public function isLoggedIn()
   {
     if (\Session::has('token')) {
@@ -56,6 +61,7 @@ class GoogleLogin
    * @param $code
    * @return string
    */
+  
   public function login($code)
   {
     $this->client->authenticate($code);

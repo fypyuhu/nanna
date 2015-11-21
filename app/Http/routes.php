@@ -4,45 +4,18 @@ Route::get('/loginCallback', ['uses' => 'GoogleLoginController@store', 'as' => '
 
 Route::any('/search', ['middleware' => 'google_login', 'as' => 'search', 'uses' => 'YoutubeAPIController@search']);
 
-
-
-Route::get('/info',function(){
-   $video =$videoList = Youtube::searchVideos('Android');
-   var_dump($video);
-   echo "<br><br><br>";
-  
-  $d = "";
-   echo $d;
+Route::any('/subscribe/store', [
     
-});
-Route::get('/download', function(){
-    
-    
-    
-  $id = "111_fGEdIvs"; //the youtube video ID
-//$id = $_GET['id'];
-
-//$format = $_GET['fmt']; //the MIME type of the video. e.g. video/mp4, video/webm, etc.
- 
+    'middleware' => 'google_login', 
+    'as' => 'subscribe/store', 
+    'uses' => 'SubscribeController@store'
+    ]);
 
 
-parse_str(file_get_contents("http://youtube.com/get_video_info?video_id=".$id),$info);     //decode the data
-$streams = $info['url_encoded_fmt_stream_map']; //the video's location info
-$streams = explode(',',$streams);
-parse_str(urldecode($streams[0]),$data);  //In this example I am downloading only the first video
-
-$url=$data['url'];
-$sig=$data['signature'];
-unset($data['type']);
-unset($data['url']);
-unset($data['sig']);
-$urlPlay= str_replace('%2C', ',' ,$url.'&'.http_build_query($data).'&signature='.$sig); 
 
 
-    echo $urlPlay;
 
 
-});
 // Home
 Route::get('/', [
 	'uses' => 'HomeController@index', 
