@@ -63,7 +63,18 @@ class Video extends Controller
         $this->retriveTitle();
         $this->retriveCLogo();
     }
-    
+     function fixDuration($time){
+     //$time = strtotime($time);
+     
+        return $fixed = $time;
+
+    }
+   function fixTime($date){
+       $time = strtotime($date);
+
+return $fixed = date('l, F jS Y \a\t g:ia', $time);
+  
+}
     public function get(){
         
         return [
@@ -79,13 +90,13 @@ class Video extends Controller
             'description' => $this->description,
           
             'lCount' => $this->lCount,
-            'publishOn' => $this->publishOn,
+            'publishOn' => $this->fixTime($this->publishOn),
             'rVideo' => $this->rVideo,
             'sCount' => $this->sCount,
             'title' => $this->title,
             'vCount' => $this->vCount,
             'cLogo'  => $this->cLogo,
-            
+            'thumb' =>"",
             
             
         ];
@@ -204,21 +215,9 @@ class Video extends Controller
  
    
      public function duration(){
-      //   return $this->id;
-//youtube video id
-    // geting the video info
-         $seconds = $this->ytarr['length_seconds'];
-        $H = floor($seconds / 3600);
-        $i = ($seconds / 60) % 60;
-        $s = $seconds % 60;
-        if($H==0)
-              return sprintf("%02d:%02d",  $i, $s);
-        if($i==0)
-             return sprintf("%02d",  $s);
-        
-        return sprintf("%02d:%02d:%02d", $H, $i, $s);
-           
-            
+          $content = file_get_contents("https://www.googleapis.com/youtube/v3/videos?id=$this->id&part=contentDetails&key=$this->key");
+           $json_a=json_decode($content,true); 
+           return $this->fixDuration($json_a["items"][0]["contentDetails"]["duration"]);
     }
     private function videoUrl(){
            parse_str(file_get_contents("http://youtube.com/get_video_info?video_id=".$this->id),$info);     //decode the data

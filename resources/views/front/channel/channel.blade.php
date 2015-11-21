@@ -1,3 +1,32 @@
+    <?php 
+                    function character_limiter($str, $n = 500, $end_char = '&#8230;')
+{
+    if (strlen($str) < $n)
+    {
+        return $str;
+    }
+
+    $str = preg_replace("/\s+/", ' ', str_replace(array("\r\n", "\r", "\n"), ' ', $str));
+
+    if (strlen($str) <= $n)
+    {
+        return $str;
+    }
+
+    $out = "";
+    foreach (explode(' ', trim($str)) as $val)
+    {
+        $out .= $val.' ';
+
+        if (strlen($out) >= $n)
+        {
+            $out = trim($out);
+            return (strlen($out) == strlen($str)) ? $out : $out.$end_char;
+        }
+    }
+ }
+                    
+                    ?>
 @extends('front.template')
 
 @section('main')
@@ -46,19 +75,19 @@
                 
 <div class="page-header">
 <div class="clearfix feed-header" data-role="banner">
-<div class="compInnerWrapper" style="background-image:url(../yt3.googleusercontent.com/-xIG2LplNnfM/UsEaL0VdyhI/AAAAAAAAAOI/irUmZ1Qy_Sk/w1707-fcrop64%3d1%2c00005a57ffffa5a8-nd/channels4_banner.jpg);"></div>
+<div class="compInnerWrapper" style="background-image:url({!!$channel["banner"]!!});"></div>
 </div>
 <div class="profile-user">
 <div class="row">
 <div class="col-lg-6 col-md-6n col-sm-6 col-xs-6">
-<img src="../yt3.googleusercontent.com/-w1VZv-xnB1w/AAAAAAAAAAI/AAAAAAAAAAA/V3gr6sUl6_Y/s240-c-k-no/photo.jpg" class="img-polaroid">
-<h2>Sikh Roots</h2>
+<img src="{!!$channel["logo"]!!}" class="img-polaroid">
+<h2>{!!$channel["title"]!!}</h2>
 </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 <div class="channelsubscribe">
 <div style="display:inline-block;">
 <div id="subscribeButton" class="btn btn-danger btn-xs pull-left" data-action="subscribe"><i class="fa fa-youtube-play"></i> Subscribe</div>
-<div style="display: inline-block;"><div class="subscriberCount"><span class="subscripberNum">2,300</span></div><div class="subscriberCountNub"><s></s><i></i></div></div>
+<div style="display: inline-block;"><div class="subscriberCount"><span class="subscripberNum">{!!$channel["sCount"]!!}</span></div><div class="subscriberCountNub"><s></s><i></i></div></div>
 </div>
 </div>
 </div>
@@ -84,67 +113,24 @@
      </script> 
      
    <div id="results">
+       @foreach($channel["videos"] as $v)
                 <div class='col-xs-12 videopost'>
-                <a class='title-color' href='watch.html' title='Fonseca Backstage at the 2015 Latin AMAs'>
+                    <a class='title-color' href='watch?v={!!$v["id"]!!}' title='{!!$v["title"]!!}'>
                     <div class='video-thumbs'>	
-                        <img class='videosthumbs-style' src='https://ytimg.googleusercontent.com/vi/2Y9cS19tSU0/mqdefault.jpg'>
+                        <img class='videosthumbs-style' src='{!!$v["thumb"]!!}'>
                         <div class='duration-toggle'>
-                            <span class='duration'>02:55</span>
+                            <span class='duration'>{!!$v["duration"]!!}</span>
                         </div>
                     </div>
-                    <div class='title-style'>Fonseca Backstage at the 2015 Latin AMAs</div>
+                    <div class='title-style'>{!!$v["title"]!!}</div>
                 </a>
                 <div class='viewsanduser'>
-                    <span style='font-weight:bold;'>by <a class='by-user' href='channel.html'>Billboard</a><br/>Posted 3 weeks ago &lowast; Views: 405</span>
+                    <span style='font-weight:bold;'>by <a class='by-user' href='channel?id={!!$v["channelID"]!!}'>{!!$v["channelName"]!!}</a><br/>Posted {!!$v["publishOn"]!!} &lowast; Views: {!!$v["vCount"]!!}</span>
                 </div>
-                <div class='postdiscription'>Fonseca Backstage at the 2015 Latin AMAs</div>
+                
+                <div class='postdiscription'>{!!character_limiter($v["description"],100)!!}</div>
             </div>
-                <div class='col-xs-12 videopost'>
-                <a class='title-color' href='watch.html' title='Fonseca Backstage at the 2015 Latin AMAs'>
-                    <div class='video-thumbs'>	
-                        <img class='videosthumbs-style' src='https://ytimg.googleusercontent.com/vi/2Y9cS19tSU0/mqdefault.jpg'>
-                        <div class='duration-toggle'>
-                            <span class='duration'>02:53</span>
-                        </div>
-                    </div>
-                    <div class='title-style'>Fonseca Backstage at the 2015 Latin AMAs</div>
-                </a>
-                <div class='viewsanduser'>
-                    <span style='font-weight:bold;'>by <a class='by-user' href='channel.html'>Billboard</a><br/>Posted 3 weeks ago &lowast; Views: 405</span>
-                </div>
-                <div class='postdiscription'>Fonseca Backstage at the 2015 Latin AMAs</div>
-            </div>
-                <div class='col-xs-12 videopost'>
-                <a class='title-color' href='watch.html' title='Fonseca Backstage at the 2015 Latin AMAs'>
-                    <div class='video-thumbs'>	
-                        <img class='videosthumbs-style' src='https://ytimg.googleusercontent.com/vi/2Y9cS19tSU0/mqdefault.jpg'>
-                        <div class='duration-toggle'>
-                            <span class='duration'>02:55</span>
-                        </div>
-                    </div>
-                    <div class='title-style'>Fonseca Backstage at the 2015 Latin AMAs</div>
-                </a>
-                <div class='viewsanduser'>
-                    <span style='font-weight:bold;'>by <a class='by-user' href='channel.html'>Billboard</a><br/>Posted 3 weeks ago &lowast; Views: 405</span>
-                </div>
-                <div class='postdiscription'>Fonseca Backstage at the 2015 Latin AMAs</div>
-            </div>
-                <div class='col-xs-12 videopost'>
-                <a class='title-color' href='watch.html' title='Fonseca Backstage at the 2015 Latin AMAs'>
-                    <div class='video-thumbs'>	
-                        <img class='videosthumbs-style' src='https://ytimg.googleusercontent.com/vi/2Y9cS19tSU0/mqdefault.jpg'>
-                        <div class='duration-toggle'>
-                            <span class='duration'>02:55</span>
-                        </div>
-                    </div>
-                    <div class='title-style'>Fonseca Backstage at the 2015 Latin AMAs</div>
-                </a>
-                <div class='viewsanduser'>
-                    <span style='font-weight:bold;'>by <a class='by-user' href='channel.html'>Billboard</a><br/>Posted 3 weeks ago &lowast; Views: 405</span>
-                </div>
-                <div class='postdiscription'>Fonseca Backstage at the 2015 Latin AMAs</div>
-            </div>
-
+        @endforeach
 
         </div>
      

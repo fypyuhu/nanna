@@ -22,8 +22,8 @@ class WatchController extends Controller
       $video = $video->get();
     //  var_dump($video);
      // exit;
-        
-        return view('front.watch.watch',compact('video'));
+     // return $video["duration"];  
+       return view('front.watch.watch',compact('video'));
         //
     }
 
