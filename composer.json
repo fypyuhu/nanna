@@ -7,8 +7,12 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
+        "firebase/php-jwt": "~2.0|~3.0",
+        "monolog/monolog": "^1.17",
         "google/apiclient": "1.1.*",
-        
+        "guzzlehttp/guzzle": "5.2.*",
+         "google/auth": "~0.4",
+       
         "laravelcollective/html": "5.1.*",
         "bestmomo/filemanager": "1.*"
     },
@@ -21,11 +25,15 @@
     },
     "autoload": {
         "classmap": [
-            "database"
+            "database", "vendor//google//apiclient//src//Google//Service"
         ],
         "files": [
             "app/helpers.php"
+             
         ],
+        "psr-0": {
+            "Google_": "src/"
+        },
         "psr-4": {
             "App\\": "app/"
         }
