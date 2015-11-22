@@ -1,44 +1,29 @@
 @extends('front.template')
 
 @section('main')
-	<div class="row">
-		<div class="box">
-			<div class="col-lg-12">
-				@if(session()->has('error'))
-					@include('partials/error', ['type' => 'danger', 'message' => session('error')])
-				@endif	
-				<hr>	
-				<h2 class="intro-text text-center">{{ trans('front/login.connection') }}</h2>
-				<hr>
-				<p>{{ trans('front/login.text') }}</p>				
-				
-				{!! Form::open(['url' => 'auth/login', 'method' => 'post', 'role' => 'form']) !!}	
-				
-				<div class="row">
-
-					{!! Form::control('text', 6, 'log', $errors, trans('front/login.log')) !!}
-					{!! Form::control('password', 6, 'password', $errors, trans('front/login.password')) !!}
-					{!! Form::submit(trans('front/form.send'), ['col-lg-12']) !!}
-					{!! Form::check('memory', trans('front/login.remind')) !!}
-					{!! Form::text('address', '', ['class' => 'hpet']) !!}		  
-					<div class="col-lg-12">					
-						{!! link_to('password/email', trans('front/login.forget')) !!}
-					</div>
-
+  <div class="container" style="margin-top:10%">
+			<div class="row">
+				<div class="col s12 blue grey white-text center-align z-depth-3">
+					<h4> Nanna  Youtube Auto Subscribers</h4>
+ 
 				</div>
-				
-				{!! Form::close() !!}
-
-				<div class="text-center">
-					<hr>
-						<h2 class="intro-text text-center">{{ trans('front/login.register') }}</h2>
-					<hr>	
-					<p>{{ trans('front/login.register-info') }}</p>
-					{!! link_to('auth/register', trans('front/login.registering'), ['class' => 'btn btn-default']) !!}
-				</div>
-
+				<div class="col s10 offset-s1 z-depth-3 grey lighten-3">
+					<br>
+					<h5> Method Login into Nanna  Youtube Auto Subscribers </h5>
+					<p>You can Login to our site using your Facebook Credential. Please keep in mind that we dont collect your account information. We only Access to your facebook account ONE TIME for generating your Access Token Only. so in other word. Your Account is Safe.
+					</p>
+                                        
+					<a class="btn btn-block btn-social btn-google" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-google']);">
+                                            <span class="fa fa-google-plus"></span> Sign in with Google
+                                          </a>				
+                                        <br>
+                                        <br>
+		
+                                        
 			</div>
-		</div>
-	</div>
+    </div>
+
+
 @stop
+
 

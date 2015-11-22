@@ -24,7 +24,7 @@ class GoogleLoginController extends Controller
 
     $loginUrl = $ga->getLoginUrl();
 
-    return "<a href='{$loginUrl}'>login</a>";
+    return view('auth.login',compact('loginUrl'));
   }
 
   /**
