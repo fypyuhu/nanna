@@ -12,6 +12,11 @@ Route::any('/subscribe/store', [
     ]);
 
 
+Route::resource('subscribe', 'SubscribeController', [
+	'except' => ['store']
+
+]);
+
 
 
 

@@ -11,7 +11,7 @@ class GoogleLogin
   /**
    * @var \Google_Client
    */
-  protected $client;
+  public $client;
 
   /**
    * @param \Google_Client $client
@@ -30,7 +30,8 @@ class GoogleLogin
                                 'https://www.googleapis.com/auth/youtubepartner',
                                 'https://www.googleapis.com/auth/youtubepartner-channel-audit',
                                 'https://www.googleapis.com/auth/youtube.force-ssl',
-                                'https://www.googleapis.com/auth/youtube.upload'
+                                'https://www.googleapis.com/auth/youtube.upload',
+                                'https://www.googleapis.com/auth/plus.login'
         /**/
                              ]);
     $this->client->setAccessType('offline');

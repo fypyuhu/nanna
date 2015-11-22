@@ -14,8 +14,28 @@ class SubscribeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+  
+    public function index(\App\Services\GoogleLogin $ga)
     {
+        
+        $token = \Session::get('token');
+
+        //echo $token[]];
+        $client = $ga->client;
+      
+        
+        $client->setAccessToken($token);
+       
+       $plus = new \Google_Service_Plus($client);
+       
+       $acessToken = $token['access_token'];
+       
+       $accountObj = call_api($acessToken,"https://www.googleapis.com/oauth2/v1/userinfo");
+       
+    //  $me = $plus->people->get('me');
+
+     //  $people->toSimpleObject();
+       print_r( $accountObj);
         //
     }
 
@@ -35,12 +55,17 @@ class SubscribeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, \Google_Client $client)
+    public function store(Request $request)
     {
+       $token = \Session::get('token');
+        
        
-        $token = \Session::get('token');
-
-        echo $token;
+       //$token=json_decode($token,true);
+        
+      
+        
+        
+        print_r($token);
      //   $youtube = new Google_Service_YouTube($client);
 
        // $resourceId = new Google_Service_YouTube_ResourceId();

@@ -31,9 +31,7 @@
             "app/helpers.php"
              
         ],
-        "psr-0": {
-            "Google_": "src/"
-        },
+       
         "psr-4": {
             "App\\": "app/"
         }

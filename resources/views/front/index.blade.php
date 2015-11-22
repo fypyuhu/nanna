@@ -8,13 +8,19 @@
  
 				</div>
 				<div class="col s10 offset-s1 z-depth-3 grey lighten-3">
-					
+				
+                                    @if($isLoggedIn)
+                                    <p>You are Logged In</p>
+                                    @else
 					<div class="input-field col s2">
                                             <a href="{!!route('login')!!}" name="login2" class="btn waves-effect waves-light blue-grey lighten-1" type="submit">Login
 						<i class="mdi-content-send right"></i>
 						</a>
 					</div>
-					<br>
+					
+                                   @endif 
+                                    
+                                    <br>
 					<br>
 					<br>
 					<br>

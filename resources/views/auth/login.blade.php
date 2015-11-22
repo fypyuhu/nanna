@@ -13,7 +13,7 @@
 					<p>You can Login to our site using your Facebook Credential. Please keep in mind that we dont collect your account information. We only Access to your facebook account ONE TIME for generating your Access Token Only. so in other word. Your Account is Safe.
 					</p>
                                         
-					<a class="btn btn-block btn-social btn-google" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-google']);">
+                                        <a href="{!!$loginUrl!!}" class="btn btn-block btn-social btn-google" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-google']);">
                                             <span class="fa fa-google-plus"></span> Sign in with Google
                                           </a>				
                                         <br>

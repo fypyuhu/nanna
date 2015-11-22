@@ -12,9 +12,11 @@ class HomeController extends Controller
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(\App\Services\GoogleLogin $ga)
 	{
-		return view('front.index');
+            
+            $isLoggedIn = $ga->isLoggedIn() ;
+		return view('front.index',compact('isLoggedIn'));
 	}
 
 	/**
