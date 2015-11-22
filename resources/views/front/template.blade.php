@@ -107,8 +107,9 @@
     
     </a>
 </li>
+
 <li>
-    <a id="login-btn" href="#" data-remote="account" data-target="#loginbox" data-toggle="modal">
+    <a id="login-btn" href="{!!route('login')!!}">
         
         <div class="login-toggle"><i class="fa fa-google-plus g-icon-handle"></i><div>Sign in</div></div>
     

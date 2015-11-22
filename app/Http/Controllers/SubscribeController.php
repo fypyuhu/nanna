@@ -35,11 +35,16 @@ class SubscribeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, \Google_Client $client)
     {
-        
+       
         $token = \Session::get('token');
+
         echo $token;
+     //   $youtube = new Google_Service_YouTube($client);
+
+       // $resourceId = new Google_Service_YouTube_ResourceId();
+
         //
     }
 
